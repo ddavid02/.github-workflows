@@ -1,23 +1,23 @@
-name: Daily Commit
+# name: Daily Commit # Name of the workflow
 
-on:
-  schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC
-  workflow_dispatch: # Allows manual triggering
+# on:
+#   schedule:
+#     - cron: '0 0 * * *' # Triggers the workflow daily at midnight UTC
+#   workflow_dispatch: # Allows manual triggering
 
-jobs:
-  commit:
-    runs-on: ubuntu-latest
+# jobs:
+#   commit:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
 
-      - name: Make a dummy change
-        run: |
-          echo "Updated on $(date)" >> activity.log
-          git config user.name "ddavid02"
-          git config user.email "ddavid0222@gmail.com"
-          git add activity.log
-          git commit -m "Daily update: $(date)"
-          git push
+#       - name: Make a dummy change
+#         run: |
+#           echo "Updated on $(date)" >> activity.log
+#           git config user.name "Your Bot Name"
+#           git config user.email "youremail@example.com"
+#           git add activity.log
+#           git commit -m "Daily update: $(date)"
+#           git push

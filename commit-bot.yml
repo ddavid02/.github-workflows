@@ -16,8 +16,8 @@ jobs:
       - name: Make a dummy change
         run: |
           echo "Updated on $(date)" >> activity.log
-          git config user.name "Your Bot Name"
-          git config user.email "youremail@example.com"
+          git config user.name "ddavid02"
+          git config user.email "ddavid0222@gmail.com"
           git add activity.log
           git commit -m "Daily update: $(date)"
           git push
